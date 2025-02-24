@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Poetry Archive</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <ul>
+        <li>
+          <img
+            src="assets/icons/pen_14458593.png"
+            alt="Quill Icon"
+            width="60"
+          />
+        </li>
+        <li class="links"><a href="./index.html">Home</a></li>
+        <li><a href="poetry_archive.html">Archive</a></li>
+        <li><a href="about.html">About Us</a></li>
+      </ul>
+    </div>
+
+    <header class="header">
+      <h1>Poetry Archive</h1>
+      <p>A collection of timeless verses</p>
+    </header>
+
+    <!-- Optional Search Bar -->
+    <div class="search-container">
+      <input type="text" id="search" placeholder="Search for a poem..." />
+    </div>
+
+    <!-- Categories (Optional) -->
+    <nav class="categories">
+      <button data-filter="all">All</button>
+      <button data-filter="love">Love</button>
+      <button data-filter="nature">Nature</button>
+      <button data-filter="reflection">Reflection</button>
+    </nav>
+
+    <!-- Poetry List -->
+    <section class="poetry-list">
+      <div class="poem-card" data-category="nature">
+        <h3><a href="/poem-pages/item5.html">The Whispering Wind</a></h3>
+        <p>Softly, the wind whispers tales from afar...</p>
+      </div>
+      <div class="poem-card" data-category="love">
+        <h3><a href="/poem-pages/item3.html">Ode to the Moon</a></h3>
+        <p>A silver orb, rising in the night sky...</p>
+      </div>
+      <div class="poem-card" data-category="reflection">
+        <h3><a href="poem3.html">Echoes of Time</a></h3>
+        <p>Memories etched upon the sands of eternity...</p>
+      </div>
+      <!-- Add more poems here -->
+    </section>
+
+    <footer class="footer" style="padding: 3px">
+      <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
