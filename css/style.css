@@ -7,18 +7,34 @@
 
 body {
   font-family: "Cormorant Garamond", serif;
-  background: url("assets/images/parchment.jpg") no-repeat center center fixed;
-  background-size: cover;
-  /* color: #4e3629; */
-  color: #34495e;
+  background-color: #fef9f3;
+  color: #4a3b2f;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: max-content repeat(3, minmax(15%, 1fr)) max-content;
+  gap: 10px;
+  font-family: "Cormorant Garamond", cursive;
+  height: 100%;
+  color: #4e3629;
+  /* background-color: #3e2723; */
   background-color: #faebd7;
 }
+
+.nav {
+  position: sticky;
+  top: 0;
+  height: fit-content;
+}
+
 .nav ul {
   display: flex;
-  justify-content: space-between;
-  flex-direction: row;
-  /* background-color: #3e2723; */
-  background-color: #34495e;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 10px 0;
+  /* border-bottom: 2px solid #c4b7a682; */
 }
 .links {
   margin-left: auto;
@@ -31,70 +47,113 @@ ul a {
   justify-content: center;
   align-items: center;
   gap: 15px;
-  padding: 0 5px;
-  color: white;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Cormorant Garamond", serif;
+  /* color: #4e3629; */
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  color: #4a3b2f;
+  font-weight: 700;
 }
 ul a:hover {
-  /* background-color: #4e3629; */
-  background-color: #3b6186;
-  border-radius: 5px;
+  color: #a67c52;
+  border-bottom: 1px solid #a67c52;
 }
 
-header {
+.header {
+  align-self: center;
+  margin: 0 auto;
   text-align: center;
-  padding: 50px;
-  /* background-color: rgba(255, 255, 255, 0.8); */
-  /* border-bottom: 2px solid #4e3629; */
-  border-bottom: 2px solid #34495e;
-  background-color: #faebd7;
+  background-color: #fef9f3;
+  width: 100%;
+  padding: 40px 0;
+  border-bottom: 1px solid #c4b7a6;
 }
 
-header h1 {
+.header h1 {
   font-family: "Great Vibes", cursive;
-  font-size: 60px;
-  /* color: #3e2723; */
-  color: #34495e;
+  margin-bottom: 10px;
+  color: #a67c52;
+  font-size: 4em;
 }
 
-header p {
-  font-size: 20px;
+.header p {
+  color: #4a3b2f;
+  font-size: 1.5em;
   font-style: italic;
-  /* color: #5e3a3a; */
-  color: #34495e;
 }
 
-section {
+.intro-quote {
+  padding: 27px;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 40px;
   margin: 20px;
 }
 
+.intro-quote .intro {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.intro-quote .fav-quote {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  border: 1px solid #c4b7a6;
+  padding: 20px;
+  background-color: #fef9f3;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #4a3b2f;
+}
+
+.fav-quote h3,
+.fav-quote p {
+  text-align: center;
+}
+
+.fav-quote p {
+  font-style: italic;
+  font-size: 1.2em;
+  color: #4a3b2f;
+}
 .featured-poems {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
+  /* background-color: #a7918aaf; */
+  background-color: #a7918a4f;
 }
 
 .poem-card {
-  background: url("assets/images/scroll.png") no-repeat center center;
+  background: url("assets/images/parchment.png") no-repeat center center;
   background-size: contain;
-  padding: 20px;
-  width: 300px;
-  margin: 10px;
-  /* color: #4e3629; */
-  color: #34495e;
-  text-align: center;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  background-color: rgba(250, 235, 215, 0.95);
+  background-blend-mode: multiply;
+  border: 1px solid #c4b7a6;
+  color: #4e3629;
+  padding: 20px;
+  width: 300px;
+  margin: 10px;
+  height: fit-content;
+  text-align: center;
 }
 
 .poem-card:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(166, 124, 82, 0.4);
 }
 
 .poem-card h3 {
   font-family: "Great Vibes", cursive;
   font-size: 24px;
+  color: #a67c52;
 }
 
 .poem-card a {
@@ -153,14 +212,14 @@ section {
   gap: 20px;
 }
 
-.items footer,
-footer {
-  position: fixed;
+.footer {
+  text-align: center;
+  padding: 10px 0;
+
+  color: #4e3629;
+  font-family: "Cormorant Garamond", serif;
+  position: relative;
   bottom: 0;
   width: 100%;
-  text-align: center;
-  padding: 10px;
-  /* background-color: #3e2723; */
-  background-color: #34495e;
-  color: #fff;
+  border-top: 1px solid #c4b7a6;
 }

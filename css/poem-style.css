@@ -1,0 +1,105 @@
+/* Reset + Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cormorant Garamond", serif;
+  background-color: #fef9f3;
+  color: #4a3b2f;
+  background-image: url("../assets/images/parchment.jpg"); /* Add your parchment texture */
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.85
+  ); /* Slightly translucent layer for readability */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7ccc8;
+  padding: 15px 20px;
+  border-bottom: 1px solid #c4b7a6;
+}
+
+.nav-bar h1 {
+  font-family: "Great Vibes", cursive;
+  font-size: 2.5em;
+  color: #a67c52;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  color: #4a3b2f;
+  font-size: 1.2em;
+  padding: 8px 12px;
+  background-color: #a67c52;
+  color: #fffef9;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-bar a:hover {
+  background-color: #4a3b2f;
+}
+
+/* Poem Header */
+.poem-header {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.poem-header h2 {
+  font-family: "Great Vibes", cursive;
+  font-size: 3em;
+  color: #a67c52;
+}
+
+.author {
+  font-style: italic;
+  color: #4a3b2f;
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+/* Poem Container */
+.poem-container {
+  background-color: #fffef9;
+  padding: 30px;
+  border: 1px solid #c4b7a6;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.poem-container p {
+  white-space: pre-wrap; /* Preserve line breaks */
+  line-height: 2;
+  font-size: 1.2em;
+  color: #4a3b2f;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #c4b7a6;
+  color: #4a3b2f;
+  font-size: 0.9em;
+}
