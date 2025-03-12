@@ -131,7 +131,7 @@ ul a:hover {
 
 .poetry-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  grid-template-columns: repeat(3, minmax(25%, 1fr));
   padding: 0 20px;
   column-gap: 40px;
   row-gap: 20px;
@@ -167,6 +167,21 @@ ul a:hover {
   color: #4a3b2f;
 }
 
+.poem-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.poem-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.poem-content h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
 dialog {
   padding: 20px;
   border: none;
@@ -184,8 +199,12 @@ dialog form {
   gap: 10px;
   margin-top: 15px;
 }
+.poem-buttons button {
+  width: 100px;
+}
 
-#showDialog {
+#showDialog,
+.poem-buttons button {
   padding: 5px;
   width: 150px;
   height: fit-content;
@@ -194,6 +213,7 @@ dialog form {
   border: none;
   background-color: #a67c52;
   color: #faebd7;
+  align-self: flex-end;
 }
 
 .footer {

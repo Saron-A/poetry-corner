@@ -26,6 +26,8 @@ form.addEventListener("submit", (e) => {
 
   dialog.close();
   form.reset();
+
+  displayCorner();
 });
 
 showDialog.addEventListener("click", () => {
@@ -39,13 +41,44 @@ function displayCorner() {
     let poemCard = document.createElement("div");
     poemCard.classList.add("poem-card");
 
+    let poemContent = document.createElement("div");
+    poemContent.classList.add("poem-content");
+
     let title = document.createElement("h3");
     title.textContent = poem.title;
 
     let genre = document.createElement("p");
     genre.textContent = `Genre: ${poem.genre}`;
 
-    poemCard.append(title, genre);
+    let buttons = document.createElement("div");
+    buttons.classList.add("poem-buttons");
+
+    let del = document.createElement("button");
+    del.innerHTML = "Delete";
+    del.addEventListener("click", () => {
+      poemCard.remove();
+      let index = corner.indexOf(poem);
+      corner.splice(index, 1);
+      localStorage.setItem("corner", JSON.stringify(corner));
+
+      displayCorner();
+    });
+    let edit = document.createElement("button");
+    edit.innerHTML = "Edit";
+    edit.addEventListener("click", () => {
+      let newTitle = prompt("Enter new title");
+      let newGenre = prompt("Enter new genre");
+
+      poem.title = newTitle;
+      poem.genre = newGenre;
+
+      localStorage.setItem("corner", JSON.stringify(corner));
+      displayCorner();
+    });
+
+    buttons.append(del, edit);
+    poemContent.append(title, genre);
+    poemCard.append(poemContent, buttons);
     list.appendChild(poemCard);
   });
 }
