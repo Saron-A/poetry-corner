@@ -16,12 +16,13 @@ body {
   grid-template-rows:
     max-content minmax(15%, 1fr) max-content minmax(15%, 1fr)
     fit-content max-content;
-  row-gap: 100px;
+  row-gap: 80px;
   font-family: "Cormorant Garamond", cursive;
   height: 100%;
   color: #4e3629;
   /* background-color: #3e2723; */
   background-color: #faebd7;
+  width: 100%;
 }
 
 .nav {
@@ -100,11 +101,13 @@ ul a:hover {
 .search-categories {
   display: grid;
   grid-template-rows: 1fr 1fr;
+
   gap: 10px;
+  margin: 0 auto;
 }
 
 .search-container input {
-  width: 60%;
+  width: 100%;
   padding: 10px;
   border: 1px solid #c4b7a6;
   background-color: #fef9f3;
@@ -162,6 +165,35 @@ ul a:hover {
 .poem-card p {
   font-size: 1em;
   color: #4a3b2f;
+}
+
+dialog {
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+#showDialog {
+  padding: 5px;
+  width: 150px;
+  height: fit-content;
+  margin: 30px auto;
+  border-radius: 10px;
+  border: none;
+  background-color: #a67c52;
+  color: #faebd7;
 }
 
 .footer {

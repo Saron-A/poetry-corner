@@ -62,9 +62,30 @@
         </div>
       </div>
 
-      <div class="upload">
-        <a href="public/upload_poems.html">Upload Poems</a>
-      </div>
+      <dialog>
+        <h3>Add a poem!</h3>
+        <form id="newPoem">
+          <div class="input-label">
+            <label for="title">Title: </label>
+            <input type="text" id="title" name="title" />
+          </div>
+
+          <div class="input-label">
+            <label for="data-category">Choose the genre</label>
+            <input type="text" id="data-category" name="genre">
+          </div>
+
+          <div class="input-label">
+            <label for="date">Date: </label>
+            <input type="date" id="date" name="date" />
+          </div>
+
+          <button type="submit">Submit</button>
+        </form>
+      </dialog>
+
+      <button id="showDialog">Add Book</button>
+    </div>
 
       <footer class="footer">
         <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
