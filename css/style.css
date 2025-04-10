@@ -7,7 +7,8 @@
 
 body {
   font-family: "Cormorant Garamond", serif;
-  background-color: #fef9f3;
+  /* background-color: #fef9f3; */
+
   color: #4a3b2f;
 }
 
@@ -17,9 +18,11 @@ body {
   gap: 10px;
   font-family: "Cormorant Garamond", cursive;
   height: 100%;
+
   color: #4e3629;
   /* background-color: #3e2723; */
-  background-color: #faebd7;
+  /* background-color: #faebd7; */
+  background-color: #f1ece3;
 }
 
 .nav {
@@ -125,7 +128,8 @@ ul a:hover {
   justify-content: space-around;
   align-items: center;
   /* background-color: #a7918aaf; */
-  background-color: #a7918a4f;
+  /* background-color: #a7918a4f; */
+  background-color: #fef9f3;
 }
 
 .poem-card {
@@ -134,7 +138,7 @@ ul a:hover {
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
-  background-color: rgba(250, 235, 215, 0.95);
+  background-color: #f1ece3;
   background-blend-mode: multiply;
   border: 1px solid #c4b7a6;
   color: #4e3629;
@@ -214,12 +218,9 @@ ul a:hover {
 
 .footer {
   text-align: center;
-  padding: 10px 0;
-  background-color: white;
-  color: #4e3629;
-  font-family: "Cormorant Garamond", serif;
-  position: relative;
-  bottom: 0;
-  width: 100%;
+  padding: 20px;
   border-top: 1px solid #c4b7a6;
+  font-family: "Cormorant Garamond", serif;
+  color: #4a3b2f;
+  background-color: #fef9f3;
 }

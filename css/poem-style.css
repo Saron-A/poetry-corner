@@ -7,11 +7,8 @@
 
 body {
   font-family: "Cormorant Garamond", serif;
-  background-color: #fef9f3;
+  background-color: #f1ece3;
   color: #4a3b2f;
-  background-image: url("../assets/images/parchment.jpg"); /* Add your parchment texture */
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .page-container {

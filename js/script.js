@@ -66,8 +66,8 @@ function displayCorner() {
     let edit = document.createElement("button");
     edit.innerHTML = "Edit";
     edit.addEventListener("click", () => {
-      let newTitle = prompt("Enter new title");
-      let newGenre = prompt("Enter new genre");
+      let newTitle = prompt("Enter new title", poem.title);
+      let newGenre = prompt("Enter new genre", poem.genre);
 
       poem.title = newTitle;
       poem.genre = newGenre;
