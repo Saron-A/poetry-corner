@@ -21,7 +21,7 @@ body {
   height: 100%;
   color: #4e3629;
   /* background-color: #3e2723; */
-  background-color: #faebd7;
+  background-color: #f1ece3;
   width: 100%;
 }
 
@@ -145,16 +145,31 @@ ul a:hover {
   padding: 20px;
   margin-bottom: 15px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.65rem;
+  width: 100%;
 }
 
 .poem-card h3 {
   padding: 10px;
   margin-bottom: 10px;
+  text-align: center;
+  font-size: 1.5em;
 }
 
 .poem-card:hover {
   transform: scale(1.02);
+}
+
+.poem-card h3:hover {
+  color: #a67c52;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #a67c52;
+  padding-bottom: 5px;
+  cursor: pointer;
 }
 
 .poem-card h3 a {
@@ -165,6 +180,13 @@ ul a:hover {
 .poem-card p {
   font-size: 1em;
   color: #4a3b2f;
+  font-style: italic;
+}
+
+.poem-card h4 {
+  justify-self: flex-end;
+  align-self: flex-end;
+  padding-top: 10px;
 }
 
 .poem-buttons {
@@ -224,4 +246,5 @@ dialog form {
   font-family: "Cormorant Garamond", serif;
   color: #4a3b2f;
   background-color: #fef9f3;
+  max-height: 150px;
 }
