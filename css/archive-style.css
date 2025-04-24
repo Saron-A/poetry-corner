@@ -114,6 +114,60 @@ ul a:hover {
   font-family: "Cormorant Garamond", serif;
   color: #4a3b2f;
 }
+
+.hidden {
+  display: none !important;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 20px;
+  background-color: #fdfaf5;
+  padding: 20px;
+  border: 2px solid #deb379;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search-result {
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #e6dacb;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-result:hover {
+  background-color: #fef9f3;
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+.search-result h3 {
+  margin: 0 0 5px;
+  font-size: 1.2em;
+  color: #5c3d25;
+}
+
+.search-result h4 {
+  margin: 5px 0 0;
+  font-weight: normal;
+  color: #8a6e52;
+}
+
+.search-result p {
+  margin: 0;
+  font-size: 0.95em;
+  color: #6e5844;
+}
+
 .categories button {
   background-color: #a67c52;
   color: #fef9f3;
