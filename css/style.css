@@ -10,6 +10,7 @@ body {
   /* background-color: #fef9f3; */
 
   color: #4a3b2f;
+  width: 100vw;
 }
 
 .container {
@@ -18,6 +19,7 @@ body {
   gap: 10px;
   font-family: "Cormorant Garamond", cursive;
   height: 100%;
+  width: 100vw;
 
   color: #4e3629;
   /* background-color: #3e2723; */
@@ -223,4 +225,25 @@ ul a:hover {
   font-family: "Cormorant Garamond", serif;
   color: #4a3b2f;
   background-color: #fef9f3;
+}
+
+/* Responsive Design*/
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    width: 100vw;
+  }
+  .container {
+    width: 100vw;
+    background-color: #f1ece3;
+  }
+
+  .poetry-list.poem-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+  }
 }

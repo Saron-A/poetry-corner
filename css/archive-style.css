@@ -302,3 +302,38 @@ dialog form {
   background-color: #fef9f3;
   max-height: 150px;
 }
+
+/* Responsive Design*/
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    width: 100vw;
+  }
+  .container {
+    width: 100vw;
+    background-color: #f1ece3;
+    font-size: larger;
+  }
+
+  .nav ul {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  .nav ul li {
+    font-size: ;
+  }
+
+  .poetry-list {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(25%, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(fit-content, 1fr));
+
+    gap: 0.5rem;
+  }
+
+  .poem-card p {
+    font-size: 1em;
+    color: #4a3b2f;
+    font-style: italic;
+  }
+}
