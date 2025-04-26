@@ -237,6 +237,13 @@ ul a:hover {
   .container {
     width: 100vw;
     background-color: #f1ece3;
+    padding: 0 10px;
+  }
+  .nav ul {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
+  .nav ul li {
+    font-size: larger;
   }
 
   .poetry-list.poem-list {

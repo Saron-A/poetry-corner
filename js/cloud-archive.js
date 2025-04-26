@@ -69,3 +69,6 @@ function showPoems(poems) {
     poemCard.classList.add("poem-card");
   });
 }
+
+let poemCard = document.querySelector(".poem-card");
+poemCard.addEventListener("click", () => {});
