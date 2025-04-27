@@ -63,7 +63,7 @@ body {
 }
 
 .poem-header h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: "Great Vibes";
   font-size: 3em;
   color: #a67c52;
 }
@@ -84,11 +84,26 @@ body {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
+.poem-container.featured-poem {
+  background-color: #fffef9;
+  padding: 20px 1px;
+  border: 1px solid #c4b7a6;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
 .poem-container p {
   white-space: pre-wrap; /* Preserve line breaks */
   line-height: 2;
   font-size: 1.2em;
   color: #4a3b2f;
+}
+.poem-container p#poem-body-featured {
+  text-align: left;
+
+  font-size: 1rem;
+  padding: 0;
+  line-height: 1.3;
 }
 
 #poem-date {
@@ -107,4 +122,17 @@ body {
   border-top: 1px solid #c4b7a6;
   color: #4a3b2f;
   font-size: 0.9em;
+}
+
+/* Responsive design */
+
+/* Mobile design */
+
+@media (max-width: 480px) {
+  .nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
 }
