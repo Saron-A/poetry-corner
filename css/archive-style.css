@@ -335,4 +335,8 @@ dialog form {
     color: #4a3b2f;
     font-style: italic;
   }
+
+  #showDialog {
+    display: none;
+  }
 }
