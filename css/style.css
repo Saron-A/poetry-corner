@@ -233,6 +233,7 @@ ul a:hover {
 @media (max-width: 480px) {
   body {
     width: 100vw;
+    height: 100%;
   }
   .container {
     width: 100vw;
