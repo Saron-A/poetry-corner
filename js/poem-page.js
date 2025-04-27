@@ -27,7 +27,7 @@ async function fetchPoem() {
     let poem = response.data[0];
     console.log(poem);
     title.textContent = poem.title;
-    date.textContent = poem.creation_date;
+    date.textContent = `Uploaded: ${poem.creation_date}`;
     content.innerHTML = `${poem.body.replace(/\\n/g, "\n")}`;
 
     author.textContent = poem.author;

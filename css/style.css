@@ -275,6 +275,10 @@ ul a:hover {
     gap: 5rem;
   }
 
+  .intro-quote .intro {
+    font-size: larger;
+  }
+
   div.featured-poems {
     display: grid;
     grid-template-rows: max-content 1fr 1fr;
