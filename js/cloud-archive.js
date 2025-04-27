@@ -67,8 +67,10 @@ function showPoems(poems) {
     poemCard.append(h3, p, h4);
     poetryList.appendChild(poemCard);
     poemCard.classList.add("poem-card");
+
+    // * Add a click event listener to each poem card */
+    poemCard.addEventListener("click", () => {
+      window.location.href = `poem.html?id=${poem.id}`;
+    });
   });
 }
-
-let poemCard = document.querySelector(".poem-card");
-poemCard.addEventListener("click", () => {});

@@ -25,6 +25,7 @@ body {
   /* background-color: #3e2723; */
   /* background-color: #faebd7; */
   background-color: #f1ece3;
+  padding: 0.5rem 0;
 }
 
 .nav {
@@ -135,7 +136,6 @@ ul a:hover {
 }
 
 .poem-card {
-  background: url("assets/images/parchment.png") no-repeat center center;
   background-size: contain;
   border-radius: 15px;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
@@ -237,7 +237,6 @@ ul a:hover {
   .container {
     width: 100vw;
     background-color: #f1ece3;
-    padding: 0 10px;
   }
   .nav ul {
     background-color: rgba(255, 255, 255, 0.35);

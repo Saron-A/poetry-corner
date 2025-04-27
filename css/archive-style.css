@@ -9,6 +9,7 @@ body {
   font-family: "Cormorant Garamond", serif;
   background-color: #fef9f3;
   color: #4a3b2f;
+  width: 98vw;
 }
 
 .container {
@@ -22,7 +23,6 @@ body {
   color: #4e3629;
   /* background-color: #3e2723; */
   background-color: #f1ece3;
-  width: 100%;
 }
 
 .nav {

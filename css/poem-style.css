@@ -91,6 +91,14 @@ body {
   color: #4a3b2f;
 }
 
+#poem-date {
+  text-align: right;
+  font-style: italic;
+  color: #4a3b2f;
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+
 /* Footer */
 .footer {
   text-align: center;
