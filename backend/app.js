@@ -18,7 +18,6 @@ app.use(
     secret: "some secret",
     resave: false,
     saveUninitialized: false,
-    store: sessionStorage,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 30, // a month
     },
