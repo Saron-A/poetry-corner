@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%=username%> poetry corner</title>
+    <title><%=user.username%> poetry corner</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap"
       rel="stylesheet"
@@ -13,11 +13,45 @@
     <div class="container">
       <nav>
         <ul>
-          <li class="links"><a href="./index.html">Home</a></li>
-          <li><a href="poetry_archive.html">Archive</a></li>
-          <li><a href="about.html">About Us</a></li>
+          <li class="links"><a href="/">Home</a></li>
+          <li><a href="../../poetry_archive.html">Archive</a></li>
+          <li><a href="../../about.html">About Us</a></li>
         </ul>
       </nav>
+
+      <div class="header">
+        <h1>Night Enthusiast</h1>
+        <p>Where wallflowers bloom</p>
+      </div>
+
+      <div class="intro-quote">
+        <div class="intro">
+          <h2>Welcome to <%=user.username%>'s Poetry Corner!</h2>
+          <p><%=user.message%></p>
+        </div>
+
+        <div class="fav-quote">
+          <h3>Favorite Quote</h3>
+          <p id="quote">
+            <%=user.quote_msg%> <br />
+            -<%=user.quote_author%>
+          </p>
+        </div>
+      </div>
+
+      <div class="features-poems">
+        <h2>Featured Poems</h2>
+        <%user.featuredPoems.forEach((poem) => {%>
+        <div class="poem-card">
+          <h3><a href="/featuredPoems/1"> <%=poem.title%> </a></h3>
+        </div>
+
+        <% })%>
+      </div>
+
+      <div class="footer">
+        <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
+      </div>
     </div>
   </body>
 </html>
