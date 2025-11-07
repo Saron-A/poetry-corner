@@ -49,6 +49,27 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // routes -- mandatory
+app.get("/", (req, res) => {
+  res.render("index");
+});
+
+app.get("/signup", async (req, res) => {
+  res.render("signup");
+});
+app.post("/signup", async (req, res) => {
+  // hash it and add it to the database, make sure the password === confirm_pass
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+app.post(
+  "/login",
+  passport.authenticate({
+    successRedirect: "/",
+    failureRedirect: "/login",
+  })
+);
 
 //check if the server is listening
 app.listen(3000, (err) => {
