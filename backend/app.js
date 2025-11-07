@@ -140,6 +140,9 @@ app.post(
   })
 );
 
+const accessPath = path.join(__dirname, "public");
+app.use(express.static(accessPath));
+
 //check if the server is listening
 app.listen(PORT, (err) => {
   if (err) throw err;

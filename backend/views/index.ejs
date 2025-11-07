@@ -11,14 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <nav>
         <ul>
           <li class="links"><a href="/">Home</a></li>
+          <% if (!user) {%>
           <li><a href="/login">log in</a></li>
-          <% if(user) {%>
+          <% } if(user) {%>
           <li><a href="/poetry_archive">Archive</a></li>
           <%}%>
 
@@ -36,28 +38,59 @@
       <div class="intro-quote">
         <div class="intro">
           <h2>Welcome to <%=user.username%>'s Poetry Corner!</h2>
-          <p><%=user.message%></p>
+          <% if(user.intro){%>
+          <p><%=user.intro%></p>
+          <% }else {%>
+          <p>
+            Hi! my name is <%=user.username%> 👋. This is my corner where I will
+            be writing, saving and eventually publish my poems or any literary
+            piece. Stay tuned! 😊
+          </p>
+          <% }%>
         </div>
         <div class="fav-quote">
           <h3>Favorite Quote</h3>
+          <%if (user.quote_msg && user.quote_author) {%>
           <p id="quote">
             <%=user.quote_msg%> <br />
             -<%=user.quote_author%>
           </p>
+          <% }else {%>
+          <p>
+            The greatest glory in living lies not in never falling, but in
+            rising every time we fall, <br />
+            - Nelson Mandela
+          </p>
+          <% }%>
         </div>
       </div>
-      <div class="features-poems">
+      <div class="featured-poems">
         <h2>Featured Poems</h2>
+        <% if (user.featuredPoems.length > 0) {%>
         <%user.featuredPoems.forEach((poem) => {%>
         <div class="poem-card">
           <h3><a href="/featuredPoems/1"> <%=poem.title%> </a></h3>
         </div>
-
-        <% })%>
+        <% })%> <% }else {%>
+        <div class="default">
+          <p>
+            You have no featured poems yet. Pick one from your collection and
+            feature it here.
+          </p>
+        </div>
+        <%}%>
       </div>
-      <% }%>
+      <% } else {%>
+      <div class="default">
+        <p>
+          Welcome to Night Enthusiast poetry corner!👋<br />This is a space
+          where you can write, save and even post your poems for fellow members
+          to read and react to it <br />
+          <a href="/signup">Sign up here</a> to start your journey with us 😊
+        </p>
+      </div>
 
-      <p>No posts yet. Sign up and start your writing journey</p>
+      <%}%>
 
       <div class="footer">
         <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
