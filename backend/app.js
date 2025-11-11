@@ -80,6 +80,10 @@ passport.deserializeUser(async (id, done) => {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "./views"));
 
+// serve static assets from the public folder at the project root
+const accessPath = path.join(__dirname, "public");
+app.use(express.static(accessPath));
+
 // routes -- mandatory
 app.get("/", async (req, res) => {
   try {
@@ -170,9 +174,6 @@ app.post(
     failureRedirect: "/login",
   })
 );
-
-const accessPath = path.join(__dirname, "public");
-app.use(express.static(accessPath));
 
 //check if the server is listening
 app.listen(PORT, (err) => {

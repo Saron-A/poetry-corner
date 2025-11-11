@@ -3,10 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/poem-style.css" />
+    <title><%=poem.title%> by <%=user.username%></title>
   </head>
   <body>
-    <div class="container">
+    <div class="page-container">
       <nav>
         <ul>
           <li><a href="/">Home</a></li>
@@ -14,14 +19,16 @@
           <li><a href="/profile">Profile</a></li>
         </ul>
       </nav>
-      <div class="header">
-        <h1><%=poem.title%></h1>
-        <p>by: <%=user.username%></p>
-      </div>
+      <header class="poem-header">
+        <h1 id="poem-title"><%=poem.title%></h1>
+        <p id="poem-author">by: <%=user.username%></p>
+      </header>
 
-      <div>
-        <p><%=poem.body%></p>
-      </div>
+      <main class="poem-container">
+        <p id="poem-body"><%=poem.body%></p>
+      </main>
+
+      <p id="poem-date"><%=poem.timestamp%></p>
       <footer>
         <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
       </footer>

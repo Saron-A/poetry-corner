@@ -25,7 +25,7 @@ body {
 }
 
 /* Navigation Bar */
-.nav-bar {
+nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,13 +34,17 @@ body {
   border-bottom: 1px solid #c4b7a6;
 }
 
-.nav-bar h1 {
+nav li {
+  list-style: none;
+}
+
+header h1 {
   font-family: "Great Vibes", cursive;
   font-size: 2.5em;
   color: #a67c52;
 }
 
-.nav-bar a {
+nav a {
   text-decoration: none;
   color: #4a3b2f;
   font-size: 1.2em;
@@ -51,7 +55,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.nav-bar a:hover {
+nav a:hover {
   background-color: #4a3b2f;
 }
 
@@ -68,7 +72,7 @@ body {
   color: #a67c52;
 }
 
-.author {
+#poem-author {
   font-style: italic;
   color: #4a3b2f;
   font-size: 1.2em;
@@ -115,7 +119,7 @@ body {
 }
 
 /* Footer */
-.footer {
+footer {
   text-align: center;
   margin-top: 40px;
   padding-top: 20px;
