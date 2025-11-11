@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="archive-style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/profile">About Us</a></li>
+        </ul>
+      </nav>
+
+      <div class="header">
+        <h1>Poetry Archive</h1>
+        <p>A collection of timeless verses</p>
+      </div>
+
+      <div class="search_poems">
+        <form action="/search" method="GET">
+          <input
+            type="text"
+            name="search"
+            placeholder="Search your poems by titles"
+            required
+          />
+          <button type="submit">search</button>
+        </form>
+      </div>
+
+      <div class="poem_list">
+        <% if(user.poems.length > 0) {%>
+        <ul>
+          <%user.poems.forEach((poem) => {%>
+          <li>
+            <div class="poem-tile">
+              <h4><%=poem.title%></h4>
+              <p><%=poem.genre%></p>
+              <p><%=poem.timestamp%></p>
+            </div>
+          </li>
+          <%})%>
+        </ul>
+
+        <%}else {%>
+        <p>No poems yet.</p>
+        <%}%>
+      </div>
+
+      <footer class="footer">
+        <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
