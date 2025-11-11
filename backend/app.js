@@ -122,6 +122,21 @@ app.get("/archive", async (req, res) => {
   }
 });
 
+app.get("/details/:id", async (req, res) => {
+  try {
+    if (!req.isAuthenticated) {
+      res.redirect("/login");
+    }
+    const { id } = req.params;
+    const result = await db.getPoemById(id);
+    console.log(result);
+    res.render("details", { user: req.user, poem: result });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message });
+  }
+});
+
 app.get("/signup", async (req, res) => {
   res.render("signup");
 });
