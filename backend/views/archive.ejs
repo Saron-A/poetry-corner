@@ -8,7 +8,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="archive-style.css" />
-    <title>Document</title>
+    <title><%=user.username%> poetry archive</title>
   </head>
   <body>
     <div class="container">
@@ -16,7 +16,7 @@
         <ul>
           <li><a href="/">Home</a></li>
           <li><a href="/archive">Archive</a></li>
-          <li><a href="/profile">About Us</a></li>
+          <li><a href="/profile">Profile</a></li>
         </ul>
       </nav>
 
@@ -25,7 +25,7 @@
         <p>A collection of timeless verses</p>
       </div>
 
-      <div class="search_poems">
+      <div class="search-container">
         <form action="/search" method="GET">
           <input
             type="text"
@@ -37,13 +37,13 @@
         </form>
       </div>
 
-      <div class="poem_list">
-        <% if(user.poems.length > 0) {%>
+      <div class="poetry_list">
+        <% if(poems.length > 0) {%>
         <ul>
-          <%user.poems.forEach((poem) => {%>
+          <%poems.forEach((poem) => {%>
           <li>
-            <div class="poem-tile">
-              <h4><%=poem.title%></h4>
+            <div class="poem-card">
+              <h3><%=poem.title%></h3>
               <p><%=poem.genre%></p>
               <p><%=poem.timestamp%></p>
             </div>

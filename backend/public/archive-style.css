@@ -25,13 +25,13 @@ body {
   background-color: #f1ece3;
 }
 
-.nav {
+nav {
   position: sticky;
   top: 0;
   height: fit-content;
 }
 
-.nav ul {
+nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
