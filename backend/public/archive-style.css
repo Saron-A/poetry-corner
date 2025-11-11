@@ -33,7 +33,7 @@ nav {
 
 nav ul {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   gap: 20px;
   list-style: none;
   padding: 10px 0;
@@ -106,13 +106,24 @@ ul a:hover {
   margin: 0 auto;
 }
 
-.search-container input {
+.search-container form input {
   width: 100%;
   padding: 10px;
   border: 1px solid #c4b7a6;
   background-color: #fef9f3;
   font-family: "Cormorant Garamond", serif;
   color: #4a3b2f;
+}
+
+form button {
+  background-color: #a67c52;
+  color: #fef9f3;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  font-family: "Cormorant Garamond", serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .hidden {

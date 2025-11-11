@@ -25,16 +25,26 @@
         <p>A collection of timeless verses</p>
       </div>
 
-      <div class="search-container">
-        <form action="/search" method="GET">
-          <input
-            type="text"
-            name="search"
-            placeholder="Search your poems by titles"
-            required
-          />
-          <button type="submit">search</button>
-        </form>
+      <div class="search-categories">
+        <div class="search-container">
+          <form action="/search" method="GET">
+            <input
+              type="text"
+              name="search"
+              placeholder="Search your poems by titles"
+              required
+            />
+            <!-- <button type="submit">search</button> -->
+          </form>
+        </div>
+
+        <!-- Categories (Optional) -->
+        <div class="categories">
+          <button data-filter="all">All</button>
+          <button data-filter="love">Love</button>
+          <button data-filter="nature">Nature</button>
+          <button data-filter="reflection">Reflection</button>
+        </div>
       </div>
 
       <div class="poetry_list">
@@ -43,7 +53,7 @@
           <%poems.forEach((poem) => {%>
           <li>
             <div class="poem-card">
-              <h3><%=poem.title%></h3>
+              <h3><a href="/details"><%=poem.title%></a></h3>
               <p><%=poem.genre%></p>
               <p><%=poem.timestamp%></p>
             </div>

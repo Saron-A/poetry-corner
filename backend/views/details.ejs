@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/archive">Archive</a></li>
+          <li><a href="/profile">Profile</a></li>
+        </ul>
+      </nav>
+      <div class="header">
+        <h1><%=poem.title%></h1>
+        <p>by: <%=user.username%></p>
+      </div>
+
+      <div>
+        <p><%=poem.body%></p>
+      </div>
+      <footer>
+        <p>&copy; 2025 Poet's Corner. All rights reserved.</p>
+      </footer>
+    </div>
+  </body>
+</html>
