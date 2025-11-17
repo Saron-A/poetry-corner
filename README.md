@@ -114,7 +114,7 @@ Full authentication system
 AI poem suggestion tools
 
 
-##🖋️ Author
+### 🖋️ Author
 
 Saron A.
 Aspiring full-stack developer & poet ✨
