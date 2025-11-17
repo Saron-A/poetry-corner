@@ -102,19 +102,15 @@ DB_NAME=poetry_corner
 ## 🚧 Future Improvements
 
 Poem editing & deletion
-
 Poem categories & tags
-
 Image or audio attachments
-
 Social features (likes, comments)
-
 Full authentication system
-
 AI poem suggestion tools
 
+---
 
-### 🖋️ Author
+## 🖋️ Author
 
 Saron A.
 Aspiring full-stack developer & poet ✨
