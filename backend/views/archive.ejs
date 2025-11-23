@@ -52,11 +52,13 @@
         <ul>
           <%poems.forEach((poem) => {%>
           <li>
-            <div class="poem-card">
-              <h3><a href="/details/<%= poem.id%>"><%=poem.title%></a></h3>
-              <p><%=poem.genre%></p>
-              <p><%=poem.timestamp%></p>
-            </div>
+            <a href="/details/<%= poem.id%>" id="poem-card-a">
+              <div class="poem-card">
+                <h3><%=poem.title%></h3>
+                <p><%=poem.genre%></p>
+                <p><%=poem.timestamp%></p>
+              </div>
+            </a>
           </li>
           <%})%>
         </ul>

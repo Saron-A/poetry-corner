@@ -22,9 +22,11 @@
           <li><a href="/login">log in</a></li>
           <% } if(user) {%>
           <li><a href="/archive">Archive</a></li>
-          <%}%>
-
+          <%}%> <% if (!user) {%>
           <li><a href="/about">About Us</a></li>
+          <%} else {%>
+          <li><a href="/profile">Profile</a></li>
+          <% }%>
         </ul>
       </nav>
 

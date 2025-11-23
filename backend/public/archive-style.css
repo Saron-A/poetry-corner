@@ -42,7 +42,7 @@ nav ul {
 .links {
   margin-left: auto;
 }
-ul,
+ul li,
 ul a {
   list-style: none;
   text-decoration: none;
@@ -60,6 +60,10 @@ ul a {
 ul a:hover {
   color: #a67c52;
   border-bottom: 1px solid #a67c52;
+}
+
+#poem-card-a {
+  text-decoration: none;
 }
 
 .header {
