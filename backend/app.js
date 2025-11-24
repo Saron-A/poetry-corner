@@ -149,7 +149,7 @@ app.post("/signup", async (req, res) => {
   try {
     const { username, password, confirm_pass } = req.body;
     if (password !== confirm_pass) {
-      res.redirect("/");
+      return res.redirect("/");
     }
 
     const hashedPassword = await bcrypt.hash(password, 10);
