@@ -149,18 +149,20 @@ app.post("/signup", async (req, res) => {
   try {
     const { username, password, confirm_pass } = req.body;
     if (password !== confirm_pass) {
-      return res.redirect("/");
+      return res.status(400).send("Passwords do not match");
     }
-
+    if (rows.length > 0) {
+      return res.status(400).send("Username already taken");
+    }
     const hashedPassword = await bcrypt.hash(password, 10);
     await pool.query("INSERT INTO users (username, password) VALUES($1, $2)", [
       username,
       hashedPassword,
     ]);
-    res.redirect("/login");
+    return res.redirect("/login");
   } catch (err) {
-    console.error(err);
-    res.status(500).send({ error: err.message });
+    console.error("Signup error:", err);
+    return res.status(500).send({ error: err.message });
   }
 });
 
