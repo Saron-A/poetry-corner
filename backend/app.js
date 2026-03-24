@@ -134,9 +134,14 @@ app.get("/details/:id", async (req, res) => {
       res.redirect("/login");
     }
     const { id } = req.params;
-    const result = await db.getPoemById(id);
-    console.log(result);
-    res.render("details", { user: req.user, poem: result });
+    const file = await db.getPoemById(id);
+    console.log(file);
+    // read the file from the path and add it to the result object
+    const filePath = file.path;
+
+    const content = fs.readFileSync(filePath, "utf-8");
+
+    res.render("details", { user: req.user, poem: file, content: content });
   } catch (err) {
     console.error(err);
     res.status(500).json({ error: err.message });
