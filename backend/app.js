@@ -8,9 +8,11 @@ const path = require("path");
 const session = require("express-session");
 const passport = require("passport");
 const localStrategy = require("passport-local").Strategy;
+const fs = require("node:fs");
 
 const pool = require("./db/pool");
 const db = require("./db/queries");
+const upload = require("./multerConfig");
 
 const PORT = process.env.PORT || 3000;
 
@@ -28,7 +30,7 @@ app.use(
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 30, // a month
     },
-  })
+  }),
 );
 app.use(passport.initialize());
 app.use(passport.session());
@@ -40,7 +42,7 @@ passport.use(
     // fetch user information from the database using the username and check for password
     const { rows } = await pool.query(
       "SELECT * FROM users WHERE username = $1",
-      [username]
+      [username],
     );
     const user = rows[0];
 
@@ -54,7 +56,7 @@ passport.use(
     }
 
     return done(null, user);
-  })
+  }),
 );
 
 //Step 3: serialize and deserialize user
@@ -174,8 +176,36 @@ app.post(
   passport.authenticate("local", {
     successRedirect: "/",
     failureRedirect: "/login",
-  })
+  }),
 );
+
+app.get("/upload", (req, res) => {
+  if (!req.isAuthenticated()) {
+    res.redirect("/login");
+  } else {
+    res.render("upload", { user: req.user });
+  }
+});
+
+app.post("/upload", upload.single("file"), async (req, res) => {
+  if (!req.isAuthenticated()) {
+    return res.status(401).send("Unauthorized");
+  }
+  try {
+    const file = req.file;
+    const { title, genre } = req.body;
+
+    //send the file meta data and body data to the database
+    await pool.query(
+      "INSERT INTO poems (title, genre, path, user_id) VALUES ($1, $2,$3,$4)",
+      [title, genre, file.path, req.user.id],
+    );
+    res.redirect("/archive");
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: err.message });
+  }
+});
 
 //check if the server is listening
 app.listen(PORT, (err) => {

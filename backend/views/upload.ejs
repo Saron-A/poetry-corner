@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Upload Poems</h1>
+
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <div class="label-input">
+        <label for="poem">Enter the poem title:</label>
+        <input type="text" id="poem" name="title" />
+      </div>
+      <div class="label-input">
+        <label for="genre">Enter the genre of the poem: </label>
+        <input type="text" id="genre" name="genre" />
+      </div>
+      <div class="label-input">
+        <label for="file">Select a poem file:</label>
+        <input type="file" id="file" name="file" accept="txt" />
+      </div>
+      <button type="submit">Upload Poem</button>
+    </form>
+  </body>
+</html>
